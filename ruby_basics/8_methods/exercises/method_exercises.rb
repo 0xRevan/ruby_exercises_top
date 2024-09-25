@@ -25,7 +25,7 @@ end
 # method name: #alphabetical_list
 # parameter: games (an array)
 # return value: games, alphabetically sorted and duplicates removed
-# hint: chain Array#sort and Array#uniq together
+# hint: chain Array#uniq and Array#sort together
 
 def alphabetical_list
   games.sort.uniq
