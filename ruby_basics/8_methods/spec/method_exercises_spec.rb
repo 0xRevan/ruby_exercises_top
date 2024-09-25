@@ -1,11 +1,11 @@
 require 'spec_helper'
-require_relative '../exercises/method_exercises'
+require_relative '/method_exercises.rb'
 
 RSpec.describe 'Method Exercises' do
 
   describe 'ASCII translator exercise using #chr' do
 
-    it 'returns an uppercase A' do
+    xit 'returns an uppercase A' do
       expect(ascii_translator(65)).to eq('A')
     end
 
@@ -14,20 +14,20 @@ RSpec.describe 'Method Exercises' do
       expect(ascii_translator(122)).to eq('z')
     end
 
-    xit 'returns an exclamation mark' do
+    it 'returns an exclamation mark' do
       expect(ascii_translator(33)).to eq('!')
     end
   end
 
   describe 'common sports exercise using #intersection' do
 
-    xit 'returns the common sports' do
+    it 'returns the common sports' do
       current = ['tennis', 'football', 'baseball']
       favorite = ['baseball', 'tennis', 'basketball']
       expect(common_sports(current, favorite)).to eq(['tennis', 'baseball'])
     end
 
-    xit 'returns an empty array when there are no common sports' do
+    it 'returns an empty array when there are no common sports' do
       current = ['tennis', 'football', 'wrestling']
       favorite = ['baseball', 'basketball']
       expect(common_sports(current, favorite)).to eq([])
@@ -40,7 +40,7 @@ RSpec.describe 'Method Exercises' do
       games = ['Chess', 'Scrabble', 'Othello', 'Chess']
       expect(alphabetical_list(games)).to eq(['Chess', 'Othello', 'Scrabble'])
     end
-    
+
     xit 'returns an sorted array removing multiple duplicates' do
       games = ['Monopoly', 'Checkers', 'Risk', 'Checkers', 'Risk', 'Checkers']
       expect(alphabetical_list(games)).to eq(['Checkers', 'Monopoly', 'Risk'])

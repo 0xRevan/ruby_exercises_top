@@ -1,0 +1,19 @@
+Incorrect Aspects
+Symbols vs Strings for Hash Keys:
+
+Your initial attempt mixed up the use of strings and symbols for hash keys. Ruby conventions favor symbols for keys, especially when the keys are known and not dynamically generated.
+Method Implementations:
+
+create_favorite_hash: Used $ as a placeholder and printed values instead of returning a hash. The correct approach is to return a hash with symbols as keys.
+favorite_color and favorite_number: Accessed hash values incorrectly. Especially for favorite_number, you attempted to use fetch incorrectly.
+update_favorite_movie: Placeholder value "$%^" was used instead of the argument movie, and the method didn't consistently use symbols for keys.
+remove_favorite_number: Attempted to delete a value without specifying the correct key and used number without a colon or quotes, which would result in an error since number is undefined in this context.
+favorite_items: Used puts for output instead of returning the values.
+Correct Aspects
+General Intent: Your methods aimed to manipulate a hash in various ways (adding, removing, merging), which was the correct direction for the exercises.
+merge_favorites: You correctly used merge to combine two hashes. This method was implemented correctly and followed the intended functionality.
+Summary of Corrections
+Use symbols for hash keys consistently, as they are more efficient and standard in Ruby when the key names are static.
+Return values directly in methods rather than printing them with puts.
+Access and modify hash values using the correct key types (preferably symbols) and methods (e.g., fetch for getting a value with a default).
+Method definitions should match their purpose without unnecessary variable assignments or incorrect method calls.
